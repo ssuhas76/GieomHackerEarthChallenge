@@ -1,0 +1,34 @@
+<div class="container">
+<div class="row">
+    <div class="col-md-2">
+        Enter text to Search
+    </div>
+    <div class="col-md-4">
+        <input type="text" [(ngModel)]='projectFilter'/>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-6" [hidden]="!projectFilter" id="search-result">
+        Search results for {{projectFilter}}
+    </div>
+</div>
+<div *ngIf='projects && projects.length'>
+    <div class="row">
+    <div *ngFor='let project of projects | searchFilter : projectFilter'> 
+        <div class="col-md-5 col-sm-12 col-xs-12 project-block">
+        <h4>{{project.title}}</h4>
+        <h6>Amount Pledged: {{project["amt.pledged"] | currency : 'USD':true:'1.2-2'}}</h6>
+        <h6>Number of Backers: {{project["num.backers"]}}</h6>
+        <h6>Type: {{project.type}}</h6>
+<span id="detailed"><a [routerLink]="['/project', project['s.no'] ]">
+            <span>Project Details  </span><i class="fa fa-space-shuttle" aria-hidden="true"></i><span>  </span>
+        </a>
+        </span>
+
+        </div>
+        
+    </div>
+    </div>
+</div>
+</div>

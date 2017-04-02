@@ -1,0 +1,50 @@
+body {
+	margin: 0;
+	font-family: 'Muli', sans-serif !important;
+}
+
+
+
+
+#colorDisplay {
+	font-size: 200%;
+}
+
+.project-block{
+  border : 2px solid black;
+  border-radius: 5px;
+  margin : 3px 3px 3px 3px;
+  height: 160px;
+}
+
+#content{
+  padding-top: 25%;
+text-align: center;
+text-shadow: 0px 4px 3px grey;
+}
+
+
+h4{
+	font-size: 20px !important;
+	color: darkviolet;
+}
+
+hr{
+  width: 600px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#detailed{
+	background-color : lightgray;
+	color: black}
+
+	#search-result
+	{
+		color: darkred !important;
+	}
+
+	#kickstarter-page{
+			font-size: 20px !important;
+	color: white;
+	}
